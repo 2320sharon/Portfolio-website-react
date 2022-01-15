@@ -1,3 +1,39 @@
 .intro {
-  background-color: purple;
+  background-color: white;
+  display: flex;
+
+  .left {
+    flex: 0.7;
+    overflow: hidden;
+    .imgContainer {
+      padding-top: 17%;
+      padding-left: 17%;
+      padding-right: 17%;
+      width: 700px;
+      height: 700px;
+      background-color: salmon;
+      border-radius: 50%;
+      align-items: flex-end;
+      justify-content: center;
+      float: right;
+
+      .img {
+        height: 100%;
+      }
+    }
+  }
+
+  .right {
+    flex: 0.3;
+    background-color: rgb(24, 224, 114);
+
+    .wrapper {
+      width: 100%;
+      height: 100%;
+      padding-left: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
 }
