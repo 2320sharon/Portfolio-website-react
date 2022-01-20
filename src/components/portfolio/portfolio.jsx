@@ -59,7 +59,7 @@ function Portfolio() {
     }, [selected])
 
     return (
-        <div className='portfolio'>
+        <div className='portfolio' id = "portfolio">
             <h1>Portfolio</h1>
                 <ul>
               {list.map(item=> (<PortfolioList title={item.title} active = {selected === item.id} Setselected={Setselected} id={item.id}/>))}

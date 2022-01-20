@@ -13,7 +13,7 @@ function Intro() {
     },[])
 
     return (
-        <div className='intro'>
+        <div className='intro'id='intro'>
            <div className="left">
                 <div className="imgContainer">
                     <div className="imgCenter">
