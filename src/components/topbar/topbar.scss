@@ -2,7 +2,7 @@
 
 .topbar {
   width: 100%;
-  height: 70px;
+  height: 72px;
   background-color: white;
   color: $mainColor;
   position: fixed;
@@ -11,10 +11,11 @@
   transition: all ease 2s;
 
   .wrapper {
-    padding: 10px 20px;
+    padding: 1vh 1vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    overflow: hidden;
 
     .left {
       display: flex;
