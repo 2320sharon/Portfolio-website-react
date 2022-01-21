@@ -10,6 +10,10 @@
     font-size: 50px;
     align-items: center;
     overflow: hidden;
+
+    @include mobile {
+      font-size: 20px;
+    }
   }
 
   ul {
@@ -19,6 +23,12 @@
     overflow: hidden;
     list-style: none;
     display: flex;
+    @include mobile {
+      margin: 1vh 0;
+      flex-wrap: wrap;
+      justify-content: center;
+      height: 20vh;
+    }
   }
 
   .container {
@@ -28,6 +38,9 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    @include mobile {
+      width: 70%;
+    }
   }
 
   .item {
@@ -44,6 +57,11 @@
     padding: 0;
     overflow: hidden;
     cursor: pointer;
+
+    @include mobile {
+      width: 150px;
+      height: 100px;
+    }
 
     h3 {
       position: absolute;

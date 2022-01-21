@@ -11,6 +11,10 @@
     position: absolute;
     cursor: pointer;
 
+    @include mobile {
+      display: none;
+    }
+
     &.left {
       left: 100px;
       transform: rotateY(180deg);
@@ -33,6 +37,12 @@
     left: 0;
     transition: all 1s ease-out;
 
+    @include mobile {
+      height: 90vh;
+      flex-direction: column;
+      justify-content: center;
+    }
+
     .container {
       //width is the entire viewport (aka screen)
       width: 100vw;
@@ -49,6 +59,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @include mobile {
+          height: 27vh;
+          margin: 1vh 0;
+          width: 90%;
+        }
 
         //item is split into 12 total pieces
         .left {
@@ -82,15 +98,26 @@
             }
             h2 {
               font-size: 20px;
+              @include mobile {
+                font-size: 2vh;
+                overflow: hidden;
+              }
             }
             p {
               font-size: 13px;
+              @include mobile {
+                font-size: 2vw;
+              }
             }
             span {
               font-size: 12px;
               font-weight: 600;
               cursor: pointer;
               text-decoration: underline;
+              @include mobile {
+                font-size: 3vw;
+                overflow: hidden;
+              }
             }
           }
         }

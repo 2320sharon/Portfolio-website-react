@@ -1,6 +1,12 @@
+@import "../../global.scss";
 .intro {
   background-color: white;
   display: flex;
+
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+  }
 
   .left {
     flex: 0.6;
@@ -8,26 +14,48 @@
     // padding-top: 3%;
     // padding-left: 3%;
     .imgContainer {
-      width: 700px;
-      height: 700px;
+      width: 680px;
+      height: 680px;
       background-color: salmon;
       border-radius: 70%;
       align-items: flex-start;
       justify-content: center;
       float: left;
       padding-bottom: 0;
+      overflow-y: hidden;
+      margin-left: 4%;
+      margin-top: 4%;
+
+      @include mobile {
+        width: 90%;
+        height: 100%;
+        border-radius: 70%;
+        align-items: flex-start;
+      }
 
       .imgCenter {
+        height: 120%;
+        // width: 90%;
         padding-top: 7%;
         padding-left: 10%;
         padding-bottom: 0%;
-        position: relative;
+        overflow-y: hidden;
+        // position: relative;
+
+        @include mobile {
+          height: 100%;
+          padding-top: 0%;
+          padding-left: 0%;
+          position: relative;
+        }
+
         .img {
           padding-top: 3px;
           position: absolute;
           bottom: 0;
           border: 0;
           object-fit: cover;
+          height: 90%;
         }
       }
     }
@@ -45,15 +73,30 @@
       flex-direction: column;
       justify-content: center;
 
+      @include mobile {
+        padding-left: 0;
+        align-items: center;
+      }
+
       h1 {
         font-size: 60px;
         margin: 10px;
+
+        @include mobile {
+          font-size: 6vw;
+        }
       }
       h2 {
         font-size: 35px;
+        @include mobile {
+          font-size: 5vw;
+        }
       }
       h3 {
         font-size: 30px;
+        @include mobile {
+          font-size: 4.7vw;
+        }
 
         span {
           font-size: inherit;
