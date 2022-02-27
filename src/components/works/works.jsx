@@ -7,24 +7,24 @@ function Works() {
   const data = [
     {
       id: "1",
-      icon: "./assets/mobile.png",
+      icon: "./assets/github.png",
       title: "Digital Davis App",
       desc: "I  worked with 7 other developers to build a react native app for UC Davis Health. We used docker to create the developer environment, MongoDB as the database, and  JWT tokens for login credentials.",
       img: "./assets/UCD_works_12.png",
     },
     {
       id: "2",
-      icon: "./assets/globe.png",
-      title: "Data Analyst",
-      desc: "I've built data visulizations and performed data analysis with Python ",
-      img: "https://i.pinimg.com/originals/e9/c9/2f/e9c92f7869d682a6fa5a97fb8a298f30.jpg",
+      icon: "./assets/github.png",
+      title: "USGS : CoastSeg Project",
+      desc: "I'm building an interactive mapping app in python that allows researchers to select regions to download satellite data. The user draws a bounding box then the regions where they can download data are generated along the coast so that overlap is ensured. Additionally, I’m building a testing framework with Pytest and solved issues in an open source manner on GitHub. ",
+      img: "./assets/coastseg6.gif",
     },
     {
       id: "3",
-      icon: "./assets/writing.png",
+      icon: "./assets/github.png",
       title: "Computer Science Degree",
       desc: "I graduated with a GPA 3.9 in Computer Science in December 2021.",
-      img: "https://i.pinimg.com/originals/a9/f6/94/a9f69465d972a004ad581f245d6ad581.jpg",
+      img: "./assets/250px-Sac_State_North_Entrance.jpg",
     },
   ];
 
@@ -50,11 +50,10 @@ function Works() {
             <div className="item">
               <div className="left">
                 <div className="leftContainer">
-                  {/* <div className="imgContainer"> */}
-                  {/* <img src={d.icon} alt="" /> */}
-                  {/* </div> */}
                   <h2>{d.title}</h2>
-                  <p>{d.desc}</p>
+                  <div className="textContainer">
+                    <p>{d.desc}</p>
+                  </div>
                   {/* <span>Projects</span> */}
                 </div>
               </div>

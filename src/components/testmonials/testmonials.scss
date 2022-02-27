@@ -63,6 +63,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        overflow: hidden;
 
         img {
           &.left,
@@ -86,11 +87,28 @@
         }
       }
 
+      .center::-webkit-scrollbar {
+        height: 35%;
+        padding: 10px;
+        background-color: rgb(243, 180, 174);
+        border-radius: 10px;
+        display: none;
+        li {
+          flex-wrap: wrap;
+        }
+
+        @include mobile {
+          font-size: 12px;
+          padding: 5px;
+        }
+      }
       .center {
         height: 35%;
         padding: 10px;
         background-color: rgb(243, 180, 174);
         border-radius: 10px;
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
 
         li {
           flex-wrap: wrap;

@@ -8,7 +8,8 @@ function testmonials() {
       name: "United Home Brands",
       title: "February 2022",
       img: "assets/UHB_Square.png",
-      icon: "assets/twitter.png",
+      link: "https://github.com/2320sharon",
+      icon: "assets/github.png",
       desc: [
         <li>User Testing</li>,
         <li>Competitor Analysis</li>,
@@ -20,7 +21,8 @@ function testmonials() {
       name: "USGS",
       title: "May 2021 to Present",
       img: "assets/usgs_black_white-removebg.png",
-      icon: "assets/youtube.png",
+      link: "https://github.com/dbuscombe-usgs/CoastSeg",
+      icon: "assets/github.png",
       desc: [
         <li>Python Development</li>,
         <li>Pytest Testing Framework</li>,
@@ -34,7 +36,8 @@ function testmonials() {
       name: "UC Davis Heath",
       title: "January 2021 to December 2021",
       img: "assets/uchealth.png",
-      icon: "assets/linkedin.png",
+      link: " https://github.com/Final-Iteration/DigitalDavis",
+      icon: "assets/github.png",
       desc: [
         <li> React Native iphone app </li>,
         <li>Directed by CIO of UC Davis</li>,
@@ -50,9 +53,11 @@ function testmonials() {
         {data.map((d) => (
           <div className={d.featured ? "card featured" : "card"}>
             <div className="top">
-              <img src="assets/right-arrow.png" className="left" alt="" />
+              {/* <img src="assets/right-arrow.png" className="left" alt="" /> */}
               <img className="user" src={d.img} alt="" />
-              {/* <img src={d.icon} className="right" alt="" /> */}
+              <a href={d.link}>
+                <img src={d.icon} className="right" alt="" />
+              </a>
             </div>
             <div className="center">{d.desc}</div>
             <div className="bottom">

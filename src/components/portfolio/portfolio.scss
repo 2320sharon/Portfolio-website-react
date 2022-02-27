@@ -90,20 +90,20 @@
     }
 
     &:hover {
-      background-color: $mainColor;
+      // background-color: $mainColor;
       z-index: 6;
       transform: scale(1.2);
       animation: move 0.7s linear;
       img {
-        opacity: 0.2;
+        // opacity: 0.2;
         z-index: 0;
       }
       h3 {
-        opacity: 1;
+        // opacity: 1;
       }
       a {
-        color: white;
-        opacity: 1;
+        // color: white;
+        // opacity: 1;
         // text-decoration: none;
       }
       @keyframes move {
