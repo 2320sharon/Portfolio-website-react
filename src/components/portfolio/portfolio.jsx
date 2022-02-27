@@ -4,10 +4,8 @@ import './portfolio.scss'
 import {useEffect, useState} from "react";
 import {
     featuredPortfolio,
-    webPortfolio,
-    mobilePortfolio,
-    designPortfolio,
-    contentPortfolio,
+    WebDev_Portfolio,
+    DataPortfolio,
   } from "../../data";
 
 function Portfolio() {
@@ -16,41 +14,27 @@ function Portfolio() {
     const list = [
         {
             id: "featured",
-            title: "Featured",
+            title: "Featured Projects",
           },
           {
             id: "web",
-            title: "Web App",
+            title: "Web Development Skills",
           },
           {
             id: "mobile",
-            title: "Mobile App",
-          },
-          {
-            id: "design",
-            title: "Design",
-          },
-          {
-            id: "content",
-            title: "Content",
+            title: "Data Analysis & Storage Skills",
           },
     ];
     useEffect(() => {
         switch(selected){
-            case"featured": 
+            case "featured": 
             Setdata(featuredPortfolio)
             break;
-            case"web": 
-            Setdata(webPortfolio)
+            case "web": 
+            Setdata(WebDev_Portfolio)
             break;
-            case"moblie": 
-            Setdata(mobilePortfolio)
-            break;
-            case"design": 
-            Setdata(designPortfolio)
-            break;
-            case"content": 
-            Setdata(contentPortfolio)
+            case "mobile": 
+            Setdata(DataPortfolio)
             break;
             default:
                 Setdata(featuredPortfolio)
@@ -69,7 +53,8 @@ function Portfolio() {
                     {data.map((d)=> (
                         <div className="item">
                         <img src={d.img} alt="" />
-                        <h3>{d.title  }</h3>
+                        <h3>{d.title}</h3>
+                        <a href={d.link}>View on GitHub!</a>
                         </div>   
                     ))}
                     

@@ -57,6 +57,7 @@
     padding: 0;
     overflow: hidden;
     cursor: pointer;
+    z-index: 0;
 
     @include mobile {
       width: 150px;
@@ -64,6 +65,15 @@
     }
 
     h3 {
+      position: absolute;
+      font-size: 20px;
+      bottom: 60%;
+      left: 25%;
+      right: 0;
+      opacity: 0;
+    }
+
+    a {
       position: absolute;
       font-size: 20px;
       bottom: 40%;
@@ -81,12 +91,30 @@
 
     &:hover {
       background-color: $mainColor;
+      z-index: 6;
+      transform: scale(1.2);
+      animation: move 0.7s linear;
       img {
         opacity: 0.2;
         z-index: 0;
       }
       h3 {
         opacity: 1;
+      }
+      a {
+        color: white;
+        opacity: 1;
+        // text-decoration: none;
+      }
+      @keyframes move {
+        from {
+          z-index: 0;
+          transform: scale(1);
+        }
+        to {
+          z-index: 6;
+          transform: scale(1.2);
+        }
       }
     }
   }
